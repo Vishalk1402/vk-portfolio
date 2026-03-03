@@ -40,3 +40,16 @@
     transform: rotateY(180deg);
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444445;
+  border-radius: 10px;
+}
