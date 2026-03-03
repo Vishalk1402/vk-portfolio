@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ProjectCard = ({ img, name, desc, skills = [], liveLink = "#" }) => {
+const ProjectCard = ({ img, name, desc, skills = [], liveLink }) => {
     const [flipped, setFlipped] = useState(false);
 
     return (
