@@ -19,7 +19,7 @@ const MobileNavbar = () => {
                 onClick={() => setMenu(false)}
             />
             {menu&&
-                <nav className="md:hidden  z-40 fixed text-4xl  text-center bottom-0 right-0 left-0 bg-gray-950 h-56 text-white  ">
+                <nav className="md:hidden  z-60 fixed text-4xl  text-center bottom-0 right-0 left-0 bg-gray-950 h-56 text-white  ">
                     <ul className="flex flex-col gap-4">
                         <li onClick={()=>{setMenu(false)}}><a href="#" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg ">Resume</a></li>
                         <li onClick={()=>{setMenu(false)}}><a href="https://github.com/Vishalk1402" target="_blank" rel="noreferrer" className="transition-all ease-in-out duration-600  hover:text-gray-500 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg   ">GitHub</a></li>

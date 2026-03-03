@@ -43,30 +43,30 @@ const Contact = () => {
           <div className="space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base">
             <div className="flex items-center gap-3">
               <Mail className="text-emerald-400 w-5 h-5" />
-              <span>your@email.com</span>
+              <span>vishalkoli1402@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3">
               <Phone className="text-emerald-400 w-5 h-5" />
-              <span>+123 456 7890</span>
+              <span>8668385494</span>
             </div>
 
             <div className="flex items-center gap-3">
               <MapPin className="text-emerald-400 w-5 h-5" />
-              <span>Your City, Country</span>
+              <span>Pune 411045, Maharashtra</span>
             </div>
           </div>
 
           <div className="flex gap-4 pt-2 sm:pt-4">
             <a
-              href="#"
+              href="https://github.com/Vishalk1402"
               className="p-2 sm:p-3 bg-white/10 rounded-lg sm:rounded-xl hover:bg-emerald-500 transition"
             >
               <Github size={18} />
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/vishal-koli/"
               className="p-2 sm:p-3 bg-white/10 rounded-lg sm:rounded-xl hover:bg-emerald-500 transition"
             >
               <Linkedin size={18} />
@@ -101,7 +101,6 @@ const Contact = () => {
             Send Message
           </button>
         </form>
-
       </div>
     </section>
   );

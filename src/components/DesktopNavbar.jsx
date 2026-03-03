@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const DesktopNavbar = () => {
     return (
-        <div className="min-h-screen bg-gray-950 relative text-3xl font-bold  text-stone-400">
+        <div className="min-h-screen bg-gray-950 relative text-3xl font-bold text-stone-400">
 
             <div
-                className=" absolute top-0 left-0 h-40 w-40 bg-gray-900
+                className=" absolute z-50 top-0 left-0 h-40 w-40 bg-gray-900
                    flex items-center justify-center
                    hover:bg-gray-600 transition
                    "
@@ -18,7 +18,7 @@ const DesktopNavbar = () => {
             </div>
 
             <div
-                className="absolute top-0 right-0 h-40 w-40 bg-gray-900
+                className="absolute z-50 top-0 right-0 h-40 w-40 bg-gray-900
                    flex items-center justify-center
                    hover:bg-gray-600 transition"
                 style={{ clipPath: "polygon(100% 0, 100% 100%, 0 0)" }}
@@ -29,7 +29,7 @@ const DesktopNavbar = () => {
             </div>
 
             <div
-                className="absolute bottom-0 left-0 h-40 w-40 bg-gray-900
+                className="absolute z-50 bottom-0 left-0 h-40 w-40 bg-gray-900
                    flex items-center justify-center
                    hover:bg-gray-600 transition"
                 style={{ clipPath: "polygon(0 0, 0 100%, 100% 100%)" }}
@@ -40,7 +40,7 @@ const DesktopNavbar = () => {
             </div>
 
             <div
-                className="absolute bottom-0 right-0 h-40 w-40 bg-gray-900
+                className="absolute z-50 bottom-0 right-0 h-40 w-40 bg-gray-900
                    flex items-center justify-center
                    hover:bg-gray-600
                    hover:shadow-md shadow-amber-100 transition duration-200 "
