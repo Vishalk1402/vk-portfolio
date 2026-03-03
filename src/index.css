@@ -1,1 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik+80s+Fade&family=Rubik+Doodle+Shadow&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik+80s+Fade&family=Rubik+Doodle+Shadow&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=DM+Serif+Text:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik+80s+Fade&family=Rubik+Doodle+Shadow&family=Tilt+Prism&display=swap');
 @import "tailwindcss";
+
+.shd{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.t1 {
+    font-family: "DM Serif Text", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.text1{
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+
+}
+
+.text{
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
