@@ -87,7 +87,7 @@ const Projects = () => {
         setCount((prev) => (prev - 1 + projects.length) % projects.length);
 
     return (
-        <div className="py-20 px-4 flex flex-col items-center mb-52 lg:mb-36 h-96">
+        <div className="py-20 px-4 flex flex-col items-center mb-0 lg:mt-16 md:mt-16">
 
             {/* ================= MOBILE ================= */}
             <div className="lg:hidden  w-full max-w-sm flex flex-col items-center">
