@@ -53,7 +53,7 @@ const DesktopNavbar = () => {
 
            <div className={"hidden md:block"}>
                <ul className="absolute top-4 z-10 left-1/2 -translate-x-1/2 flex gap-6 text-xl bg-black rounded-3xl px-10 shadow-sm shadow-[#ff8e4d] py-2">
-                   <li><a href="#" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg ">Resume</a></li>
+                   <li><a href="https://1drv.ms/b/c/2054d539aeef2cd9/IQA-5hODux1ZRYKK3drLVa73AV7BXBuMY6feRcdNjEk-TZI?e=zAtUtZ" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg ">Resume</a></li>
                    <li><a href="https://github.com/Vishalk1402" target="_blank" rel="noreferrer" className="transition-all ease-in-out duration-600  hover:text-gray-500 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg   ">GitHub</a></li>
                    <li><a href="https://www.youtube.com/@javawithvk" target="_blank" rel="noreferrer" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg">YouTube</a></li>
                    <li><a href="https://www.instagram.com/javawithvk/" target="_blank" rel="noreferrer" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg">Instagram</a></li>

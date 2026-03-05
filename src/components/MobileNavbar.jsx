@@ -21,7 +21,7 @@ const MobileNavbar = () => {
             {menu&&
                 <nav className="md:hidden  z-60 fixed text-4xl  text-center bottom-0 right-0 left-0 bg-gray-950 h-56 text-white  ">
                     <ul className="flex flex-col gap-4">
-                        <li onClick={()=>{setMenu(false)}}><a href="#" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg ">Resume</a></li>
+                        <li onClick={()=>{setMenu(false)}}><a href="https://1drv.ms/b/c/2054d539aeef2cd9/IQA-5hODux1ZRYKK3drLVa73AV7BXBuMY6feRcdNjEk-TZI?e=zAtUtZ" target="_blank" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg ">Resume</a></li>
                         <li onClick={()=>{setMenu(false)}}><a href="https://github.com/Vishalk1402" target="_blank" rel="noreferrer" className="transition-all ease-in-out duration-600  hover:text-gray-500 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg   ">GitHub</a></li>
                         <li onClick={()=>{setMenu(false)}}><a href="https://www.youtube.com/@javawithvk" target="_blank" rel="noreferrer" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg">YouTube</a></li>
                         <li onClick={()=>{setMenu(false)}}><a href="https://www.instagram.com/javawithvk/" target="_blank" rel="noreferrer" className="hover:text-gray-500 ease-in-out duration-600 hover:shadow-gray-500 hover:shadow-2xl hover:text-lg">Instagram</a></li>
