@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ProjectCard = ({ img, name, desc, skills = [], liveLink }) => {
+const ProjectCard = ({ img, name, desc, skills = [], liveLink, explainProject }) => {
     const [flipped, setFlipped] = useState(false);
 
     return (
@@ -28,10 +28,10 @@ const ProjectCard = ({ img, name, desc, skills = [], liveLink }) => {
                     <img
                         src={img}
                         alt={name}
-                        className="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="h-36 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    <div className="p-4 text-center flex flex-col justify-between h-[calc(100%-12rem)]">
+                    <div className="p-4 text-center flex flex-col justify-between align-bottom h-[calc(100%-12rem)]">
                         <div>
                             <h3 className="text-emerald-400 text-xl font-semibold">
                                 {name}
@@ -62,6 +62,28 @@ const ProjectCard = ({ img, name, desc, skills = [], liveLink }) => {
                         >
                             View Live
                         </a>
+                        {explainProject && (
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    explainProject(desc,skills);
+                                }}
+                                className="
+        mt-2
+        px-4 py-2
+        text-sm font-medium
+        rounded-lg
+        bg-purple-500
+        text-white
+        transition-all duration-300
+        hover:bg-purple-400
+        hover:scale-105
+        shadow-lg shadow-purple-500/20
+      "
+                            >
+                                Explain with AI
+                            </button>
+                        )}
                     </div>
                 </div>
 
@@ -87,12 +109,13 @@ const ProjectCard = ({ img, name, desc, skills = [], liveLink }) => {
                     </div>
 
                     {/* LIVE BUTTON ON BACK */}
-                    <a
-                        href={liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="
+                    <div className="flex flex-col">
+                        <a
+                            href={liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="
               mt-4 text-center
               px-4 py-2
               text-sm font-medium
@@ -104,9 +127,32 @@ const ProjectCard = ({ img, name, desc, skills = [], liveLink }) => {
               hover:scale-105
               shadow-lg shadow-emerald-500/20
             "
-                    >
-                        View Live
-                    </a>
+                        >
+                            View Live
+                        </a>
+                        {explainProject && (
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    explainProject(desc,skills);
+                                }}
+                                className="
+        mt-2
+        px-4 py-2
+        text-sm font-medium
+        rounded-lg
+        bg-purple-500
+        text-white
+        transition-all duration-300
+        hover:bg-purple-400
+        hover:scale-105
+        shadow-lg shadow-purple-500/20
+      "
+                            >
+                                Explain with AI
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from './pages/Contact.jsx';
 import About from './pages/About.jsx';
+import AIAssistant from './components/AIAssistant.jsx';
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
                 />              
                   <div className={"relative overflow-hidden h-screen"}>
                     <Navbar />
+                    
+                        <AIAssistant/>
+                    
                     <div className={"flex absolute inset-0 justify-center items-center pointer-events-none"}>
                         <div className={"pointer-events-auto"}>
                             <Routes>

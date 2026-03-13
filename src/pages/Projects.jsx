@@ -1,14 +1,51 @@
 import React, { useState } from "react";
 import ProjectCard from "../components/ProjectCard.jsx";
+import AIResponseModal from "../components/AIResponseModal";
 import dma from "../assets/dma.png";
 import mess from "../assets/mess.png";
 import artport from "../assets/artport.png";
 import notes from "../assets/notes.png";
 import gallery from "../assets/gallery.png";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 const Projects = () => {
     const [count, setCount] = useState(0);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [aiContent, setAiContent] = useState("");
+    const [modalTitle, setModalTitle] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    const explainProject = async (desc,skills) => {
+
+        setModalTitle("AI Project Explanation");
+        setModalOpen(true);
+        setLoading(true);
+
+        try {
+            const skillNames = skills.map(skill => skill.name);
+            const res = await fetch("https://vk-port-backend.onrender.com/ai/explain-project", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    projectDescription: desc,
+                    projectSkills : skillNames
+                })
+            });
+
+            const data = await res.json();
+
+            setAiContent(data.result);
+
+        } catch {
+            setAiContent("AI explanation failed.");
+        }
+
+        setLoading(false);
+    };
 
     const projects = [
         {
@@ -80,6 +117,9 @@ const Projects = () => {
         },
     ];
 
+  
+    
+
     const next = () =>
         setCount((prev) => (prev + 1) % projects.length);
 
@@ -96,7 +136,9 @@ const Projects = () => {
                     key={projects[count].id}
                     className="w-full transition-all duration-500 ease-in-out"
                 >
-                    <ProjectCard {...projects[count]} />
+                    <ProjectCard {...projects[count]}
+                        explainProject={explainProject}
+                    />
                 </div>
 
                 <div className="flex items-center gap-6 mt-6">
@@ -114,8 +156,8 @@ const Projects = () => {
                                 key={index}
                                 onClick={() => setCount(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === count
-                                        ? "bg-black scale-125"
-                                        : "bg-gray-400"
+                                    ? "bg-black scale-125"
+                                    : "bg-gray-400"
                                     }`}
                             />
                         ))}
@@ -152,7 +194,9 @@ const Projects = () => {
                                     key={projects[index].id}
                                     className={`transition-all duration-500 ease-in-out ${style}`}
                                 >
-                                    <ProjectCard {...projects[index]} />
+                                    <ProjectCard {...projects[index]}
+                                        explainProject={explainProject}
+                                    />
                                 </div>
                             );
                         })
@@ -162,11 +206,13 @@ const Projects = () => {
                             <div
                                 key={project.id}
                                 className={`transition-all duration-500 ease-in-out ${index === count
-                                        ? "scale-105 opacity-100"
-                                        : "scale-95 opacity-60"
+                                    ? "scale-105 opacity-100"
+                                    : "scale-95 opacity-60"
                                     }`}
                             >
-                                <ProjectCard {...project} />
+                                <ProjectCard {...project} 
+                                    explainProject={explainProject}
+                                />
                             </div>
                         ))
                     )}
@@ -188,8 +234,8 @@ const Projects = () => {
                                 key={index}
                                 onClick={() => setCount(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === count
-                                        ? "bg-black scale-125"
-                                        : "bg-gray-400"
+                                    ? "bg-black scale-125"
+                                    : "bg-gray-400"
                                     }`}
                             />
                         ))}
@@ -204,6 +250,13 @@ const Projects = () => {
 
                 </div>
             </div>
+            <AIResponseModal
+                open={modalOpen}
+                title={modalTitle}
+                content={aiContent}
+                loading={loading}
+                onClose={() => setModalOpen(false)}
+            />
 
         </div>
     );
