@@ -14,33 +14,20 @@ export default function AIAssistant() {
 
   const askAI = async () => {
 
-  const portfolioContext = {
-    name: "Vishal Koli",
-    role: "Software Engineer at Siemens",
-    skills: [
-      "Java","Spring Boot","React","JavaScript",
-      "SQL","MongoDB","Docker","REST API"
-    ],
-    projects: projects.map(p => ({
-      name: p.name,
-      description: p.desc,
-      skills: p.skills.map(s => s.name)
-    }))
-  };
+    setLoading(true);
 
-  const res = await fetch(
-    "https://vk-port-backend.onrender.com/ai/ask",
-    {
+    const res = await fetch("https://vk-port-backend.onrender.com/ai/ask", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        question,
-        context: portfolioContext
-      })
-    }
-  );
+      body: JSON.stringify({ question })
+    });
 
-};
+    const data = await res.json();
+
+    setContent(data.answer);
+    setLoading(false);
+  };
+
   const analyzeJob = async () => {
 
     setLoading(true);
