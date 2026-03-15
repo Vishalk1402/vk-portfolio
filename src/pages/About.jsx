@@ -94,6 +94,57 @@ const About = () => {
           </div>
         </div>
 
+        {/* EDUCATION */}
+        <div className="space-y-6">
+          <h3 className="text-2xl font-semibold text-emerald-400">
+            Education
+          </h3>
+
+          <div className="space-y-4">
+
+            {/* BE */}
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h4 className="text-lg font-semibold text-white">
+                Bachelor of Engineering (B.E) – E&TC Engineering
+              </h4>
+              <p className="text-gray-400 text-sm">
+                S.S.B.T COET jalgaon 425002, Maharashtra
+              </p>
+              <p className="text-gray-400 text-sm">
+                CGPA: 8.11 | 2021 – 2025
+              </p>
+            </div>
+
+            {/* HSC */}
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h4 className="text-lg font-semibold text-white">
+                Higher Secondary Certificate (HSC)
+              </h4>
+              <p className="text-gray-400 text-sm">
+                S.P.D.M College, Shirpur 425427 Maharashtra
+              </p>
+              <p className="text-gray-400 text-sm">
+                Percentage: 82% | Year: 2021
+              </p>
+            </div>
+
+            {/* SSC */}
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h4 className="text-lg font-semibold text-white">
+                Secondary School Certificate (SSC)
+              </h4>
+              <p className="text-gray-400 text-sm">
+                K.K.M.V High School, Arthe 425427 Maharashtra
+              </p>
+              <p className="text-gray-400 text-sm">
+                Percentage: 77.40% | Year: 2019
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
         {/* VISION */}
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold text-emerald-400">
@@ -121,47 +172,47 @@ const About = () => {
           </p>
         </div>
 
-       {/* CORE VALUES */}
-<div className="space-y-4">
-  <h3 className="text-2xl font-semibold text-emerald-400">
-    Core Values
-  </h3>
+        {/* CORE VALUES */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-semibold text-emerald-400">
+            Core Values
+          </h3>
 
-  <ul className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-2">
-    <li>
-      <span className="font-semibold text-white">Engineering Excellence : </span> 
-      Writing clean, scalable, and maintainable code that meets high standards of performance and reliability.
-    </li>
+          <ul className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-2">
+            <li>
+              <span className="font-semibold text-white">Engineering Excellence : </span>
+              Writing clean, scalable, and maintainable code that meets high standards of performance and reliability.
+            </li>
 
-    <li>
-      <span className="font-semibold text-white">Continuous Growth : </span> 
-      Constantly learning, adapting, and evolving with modern technologies and best practices.
-    </li>
+            <li>
+              <span className="font-semibold text-white">Continuous Growth : </span>
+              Constantly learning, adapting, and evolving with modern technologies and best practices.
+            </li>
 
-    <li>
-      <span className="font-semibold text-white">Innovation with Purpose : </span> 
-      Building solutions that solve real-world problems and create meaningful impact.
-    </li>
+            <li>
+              <span className="font-semibold text-white">Innovation with Purpose : </span>
+              Building solutions that solve real-world problems and create meaningful impact.
+            </li>
 
-    <li>
-      <span className="font-semibold text-white">Integrity & Accountability : </span> 
-      Taking ownership of responsibilities and delivering solutions with transparency and professionalism.
-    </li>
-  </ul>
-</div>
+            <li>
+              <span className="font-semibold text-white">Integrity & Accountability : </span>
+              Taking ownership of responsibilities and delivering solutions with transparency and professionalism.
+            </li>
+          </ul>
+        </div>
 
-{/* PHILOSOPHY */}
-<div className="space-y-4">
-  <h3 className="text-2xl font-semibold text-emerald-400">
-    My Philosophy
-  </h3>
+        {/* PHILOSOPHY */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-semibold text-emerald-400">
+            My Philosophy
+          </h3>
 
-  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-    I believe great software is built on simplicity, strong architecture, 
-    and thoughtful user experience. Technology should not only function 
-    efficiently but also scale sustainably and create measurable impact.
-  </p>
-</div>
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+            I believe great software is built on simplicity, strong architecture,
+            and thoughtful user experience. Technology should not only function
+            efficiently but also scale sustainably and create measurable impact.
+          </p>
+        </div>
 
       </div>
     </section>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AIResponseModal from "./AIResponseModal";
-import chat from "../assets/chat.jpg"
+import robot from "../assets/robot.png"
+
 
 
 export default function AIAssistant() {
@@ -48,12 +49,19 @@ export default function AIAssistant() {
     <>
       {/* Floating Button */}
 
+
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-4 right-64 bg-emerald-500 px-4 py-3 rounded-full shadow-lg z-50"
+        className="fixed bottom-4 left-1/2 -translate-x-1/2 rounded-full shadow-lg z-50 hover:scale-110 transition-transform duration-200"
       >
-       AI
+        <img
+          src={robot}
+          alt="Chatbot"
+          className="w-14 h-14 object-contain"
+        />
       </button>
+
+
 
       <AIResponseModal
         open={open}
@@ -63,28 +71,28 @@ export default function AIAssistant() {
         onClose={() => setOpen(false)}
       >
 
+
+
         {/* Tabs */}
 
         <div className="flex gap-4 mb-4">
 
           <button
             onClick={() => setMode("ask")}
-            className={`px-3 py-1 rounded ${
-              mode === "ask"
-                ? "bg-emerald-500 text-black"
-                : "bg-gray-700"
-            }`}
+            className={`px-3 py-1 rounded ${mode === "ask"
+              ? "bg-emerald-500 text-black"
+              : "bg-gray-700"
+              }`}
           >
             Ask About Me
           </button>
 
           <button
             onClick={() => setMode("job")}
-            className={`px-3 py-1 rounded ${
-              mode === "job"
-                ? "bg-emerald-500 text-black"
-                : "bg-gray-700"
-            }`}
+            className={`px-3 py-1 rounded ${mode === "job"
+              ? "bg-emerald-500 text-black"
+              : "bg-gray-700"
+              }`}
           >
             Job Match
           </button>
